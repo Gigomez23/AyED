@@ -1,5 +1,11 @@
 import os
-clear = lambda: os.system('cls')
+import platform
+
+clear = None
+if platform.system() == "Windows":
+    clear = lambda: os.system('cls')
+else:
+    clear = lambda: os.system('clear')
 text_ejemplo_5 = "Seleccione de que figura desea calcular la superficie \n1. Cuadrado \n2. Círculo \n3. Rectángulo \n4. Trapecio \n5. Triángulo \n0. Salir"
 text = "Seleccione un tipo de vehiculo: \n 1. Bicicleta \n 2. Moto \n 3. Carro \n 4. Camión \n 0. Salir"
 text_main = "Seleccione que ejercisio desea revisar \n1. Importe Vehiculos \n2. Facturación \n3. Venta Docenas \n4. Cifras Númericas \n5. Cálculo Superficies \n0. Cerrar Programa"
