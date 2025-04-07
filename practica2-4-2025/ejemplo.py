@@ -1,6 +1,5 @@
 """Ejemplificando clases en python"""
 from modulo import *
-        
 
 if __name__ == "__main__":
     nombre = input("Introduce tu nombre: ")
