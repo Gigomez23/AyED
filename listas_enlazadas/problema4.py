@@ -6,6 +6,7 @@ Este archivo contiene la funcion main y sirve como punto de entrada para el edit
 Autores: Andrea Bojorge
          Gabriel Gomez
          Gabriel Lacayo
+         Yaritza Diaz
 """
 
 from funciones import *
