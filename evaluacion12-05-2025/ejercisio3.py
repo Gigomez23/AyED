@@ -1,3 +1,9 @@
+"""
+archivo: ejercisio3.py
+descripcion: Este archivo contiene la implementación de una interfaz gráfica para la gestión de donantes de sangre.
+Segun el ejercicio 3 de la guia. 
+"""
+
 import customtkinter as ctk
 from tkinter import messagebox
 from models.pila_hospital import PilaDonantes

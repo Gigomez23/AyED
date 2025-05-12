@@ -1,3 +1,8 @@
+"""
+archivo: ejercisio2.py
+descripcion: Este archivo contiene la implementación de una interfaz gráfica para la gestión de una panaderia en Leon.
+Segun el ejercicio 2 de la guia. 
+"""
 import customtkinter as ctk
 from tkinter import messagebox
 from models.pilas_pan import PilaPanes
