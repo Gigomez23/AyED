@@ -3,6 +3,9 @@ archivo: principal.py
 Este módulo contiene la implementación de la interfaz gráfica principal del sistema.
 autores: Andrea Bojorge, Gabriel Gómez, Gabriel Lacayo
 fecha: 10/05/2025
+para poder ejecutar el programa asegurese de instalar la libreria customtkinter
+ejecutando el siguiente comando:
+pip install customtkinter
 """
 import customtkinter as ctk
 from ejercisio1 import DocumentReviewFrame
@@ -16,7 +19,7 @@ class MainApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Sistema Integrado Nicaragüense")
+        self.title("SEjemplificacion de Pilas en diversos módulos")
         self.geometry("1400x850")
         ctk.set_appearance_mode("light")
 
