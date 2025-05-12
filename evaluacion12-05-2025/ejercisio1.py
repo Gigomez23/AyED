@@ -1,3 +1,9 @@
+"""
+archivo: ejercisio1.py
+descripcion: Este archivo contiene la implementación de una interfaz gráfica para la gestión de documentos municipales.
+Segun el ejercicio 1 de la guia. 
+"""
+
 import customtkinter as ctk
 from tkinter import messagebox, ttk
 from datetime import datetime
