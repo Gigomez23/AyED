@@ -61,7 +61,7 @@ class Ej1Frame(ctk.CTkFrame):
         paginas = self.entry_pages.get()
         doc = Documento(nombre, usuario, int(paginas))
         self.lista.agregar_documento(doc)
-        self.queue_box.insert("end", f"{nombre}, {usuario}, {paginas} páginas\n")
+        self.queue_box.insert("end", f"{doc}\n")
 
 
     def imprimir_documento(self):
@@ -82,7 +82,7 @@ class Ej1Frame(ctk.CTkFrame):
         nombre = documento.nombre if documento else "No hay documentos"
         usuario = documento.usuario if documento else "N/A"
         paginas = documento.num_paginas if documento else "N/A"
-        CTkMessagebox(title="Documento Actual", message=f"El documento actual es:\n{nombre} (por {usuario}, {paginas} páginas)")
+        CTkMessagebox(title="Documento Actual", message=f"{documento}")
 
 
 if __name__ == "__main__":
