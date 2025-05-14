@@ -4,6 +4,7 @@ Este módulo contiene la interfaz gráfica para la simulación de una cola de at
 autores: Andrea Bojorge, Gabriel Gómez, Gabriel Lacayo
 fecha: 10/05/2025
 """
+from ejercicio_1.cola import *
 
 import customtkinter as ctk
 
@@ -11,6 +12,7 @@ class ClinicaAtencionFrame(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
+        self.lista = Cola()
         self.grid_columnconfigure((0, 1), weight=1)
         self.grid_rowconfigure(4, weight=1)
 
@@ -23,11 +25,11 @@ class ClinicaAtencionFrame(ctk.CTkFrame):
         self.entry_patient_name.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
 
         # Botón para agregar paciente
-        self.btn_add_patient = ctk.CTkButton(self, text="Registrar llegada")
+        self.btn_add_patient = ctk.CTkButton(self, text="Registrar llegada", command=self.agregar_paciente)
         self.btn_add_patient.grid(row=1, column=1, padx=10, pady=5)
 
         # Botón para atender paciente
-        self.btn_attend = ctk.CTkButton(self, text="Atender siguiente paciente")
+        self.btn_attend = ctk.CTkButton(self, text="Atender siguiente paciente", command= self.eliminar_paciente)
         self.btn_attend.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
 
         # Etiqueta de la cola actual
@@ -39,15 +41,21 @@ class ClinicaAtencionFrame(ctk.CTkFrame):
         self.queue_box.grid(row=4, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
 
         # Pacientes precargados para la demostración
-        self._cargar_pacientes_ejemplo()
+        # self._cargar_pacientes_ejemplo()
 
-    def _cargar_pacientes_ejemplo(self):
-        texto = (
-            "1. Elma Scapo Ronga\n"
-            "2. Augusto Cesar Sandino\n"
-            "3. ALGP Gutierrez\n"
-        )
-        self.queue_box.insert("0.0", texto)
+    def agregar_paciente(self):
+        self.lista.insertar(self.entry_patient_name.get())
+        self.refrescar_lista()
+
+    def eliminar_paciente(self):
+        self.lista.eliminar()
+        self.refrescar_lista()
+
+    def refrescar_lista(self):
+        self.queue_box.delete("1.0", "end")
+        lista = self.lista.imprimir()
+        for items in lista:
+            self.queue_box.insert("end", f"{items}\n")
 
 
 if __name__ == "__main__":
