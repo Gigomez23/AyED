@@ -32,11 +32,12 @@ class Cola:
 
     def imprimir(self):
         """Muestra la lista actual de pacientes en espera."""
+        lista = []
         if self.frente is None:
-            print("No hay pacientes en espera.")
+            return ["Cola vacía"]
         else:
-            print("Pacientes en espera:")
             actual = self.frente
             while actual is not None:
-                print(f"- {actual.dato}")
+                lista.append(actual.dato)
                 actual = actual.siguiente
+            return lista
