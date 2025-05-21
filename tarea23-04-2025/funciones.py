@@ -46,4 +46,8 @@ def menu(ListaEnlazada: ListaEnlazada):
         else:
             print("Opción inválida, intente nuevamente.")
         print("6. Contar elementos")
-    
+
+if __name__ == "__main__":
+    # Crear una instancia de la lista enlazada
+    lista = ListaEnlazada()
+    menu(lista)
