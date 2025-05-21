@@ -1,5 +1,5 @@
-from models.lista_enlazada import ListaEnlazada
-from funciones_generales import *
+from evaluacion.models.lista_enlazada import ListaEnlazada
+from evaluacion.funciones_adicionales.funciones_generales import *
 
 def agregar_valor(ListaEnlazada: ListaEnlazada):
     """

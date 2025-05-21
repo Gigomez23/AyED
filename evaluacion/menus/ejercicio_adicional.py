@@ -1,8 +1,8 @@
-from conversor import infija_a_postfija
-from evaluador import evaluar_postfija
-from utilidades import contiene_letras
+from evaluacion.funciones_adicionales.conversor import infija_a_postfija
+from evaluacion.funciones_adicionales.evaluador import evaluar_postfija
+from evaluacion.funciones_adicionales.utilidades import contiene_letras
 
-def menu():
+def menu_adicional():
     while True: 
         print("=== MENÚ ===")
         print("1. Convertir expresión infija a postfija")
@@ -37,4 +37,4 @@ def menu():
 
 
 if __name__ == '__main__':
-    menu()
+    menu_adicional()

@@ -1,6 +1,12 @@
-from ejercicio4 import *
-from ejercicio5 import *
-from funciones_generales import *
+from evaluacion.menus.ejercicio4 import *
+from evaluacion.menus.ejercicio5 import *
+from evaluacion.menus.ejercicio3 import *
+from evaluacion.menus.ejercicio2 import *
+from evaluacion.menus.ejercicio1 import *
+from evaluacion.menus.ejercicio_adicional import *
+from funciones_adicionales.funciones_generales import *
+
+
 
 def imprimir_menu():
     print("Seleccione el ejercicio que desea ejecutar:")
@@ -13,27 +19,43 @@ def imprimir_menu():
     print("7. Salir")
 
 def menu_principal():
-    seleccion = int(input("Seleccione un ejercicio: "))
-    match seleccion:
-        case 1:
-            print("Ejercicio 1")
-            # Llamar a la función del ejercicio 1
-            pass
-        case 2:
-            print("Ejercicio 2")
-            # Llamar a la función del ejercicio 2
-            pass
-        case 3:
-            print("Ejercicio 3")
-            # Llamar a la función del ejercicio 3
-            pass
-        case 4:
-            print("Ejercicio 4")
-            # Llamar a la función del ejercicio 4
-            menu4()
-        case 5:
-            print("Ejercicio 5")
-            # Llamar a la función del ejercicio 5
-            menu5()
-        case _:
-            print("Selección inválida. Intente nuevamente.")
+    while True:
+        imprimir_menu()
+        seleccion = int(input("Seleccione un ejercicio: "))
+        match seleccion:
+            case 1:
+                print("Ejercicio 1")
+                menu1()
+                esperar_usuario()
+            case 2:
+                print("Ejercicio 2")
+                menu2()
+                esperar_usuario()
+            case 3:
+                print("Ejercicio 3")
+                menu3()
+                esperar_usuario()
+            case 4:
+                print("Ejercicio 4")
+                # Llamar a la función del ejercicio 4
+                menu4()
+                esperar_usuario()
+            case 5:
+                print("Ejercicio 5")
+                # Llamar a la función del ejercicio 5
+                menu5()
+                esperar_usuario()
+            case 6:
+                print("Ejercicio Adicional")
+                # Llamar a la función del ejercicio adicional
+                menu_adicional()
+                esperar_usuario()
+            case 7:
+                print("Saliendo del programa...")
+                esperar_usuario()
+                return
+            case _:
+                print("Selección inválida. Intente nuevamente.")
+                esperar_usuario()
+                return
+

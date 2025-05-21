@@ -1,4 +1,4 @@
-from utilidades import es_operador
+from evaluacion.funciones_adicionales.utilidades import es_operador
 def evaluar_postfija(exp):
     pila = []
     for c in exp:

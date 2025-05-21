@@ -1,6 +1,6 @@
-from balance_checker import is_balanced
+from evaluacion.funciones_adicionales.balance_checker import is_balanced
 
-def main():
+def menu2():
     test_cases = [
         ("()", True),
         ("({[]})", True),

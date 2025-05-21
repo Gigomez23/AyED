@@ -1,4 +1,4 @@
-from node import Node
+from evaluacion.models.node import Node
 
 
 class Playlist:

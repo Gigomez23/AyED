@@ -1,4 +1,4 @@
-from pila import Pila
+from evaluacion.models.pila import Pila
 
 def invertir_palabras(frase):
     pila = Pila()

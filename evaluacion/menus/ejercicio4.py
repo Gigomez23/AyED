@@ -1,5 +1,5 @@
-from models.cola_prioridad import *
-from funciones_generales import *
+from evaluacion.models.cola_prioridad import *
+from evaluacion.funciones_adicionales.funciones_generales import *
 
 
 def mostrar_menu():

@@ -1,4 +1,4 @@
-from stack import Stack
+from evaluacion.models.stack import Stack
 
 def is_balanced(expression):
     stack = Stack()

@@ -1,4 +1,4 @@
-from utilidades import prioridad
+from evaluacion.funciones_adicionales.utilidades import prioridad
 
 def infija_a_postfija(exp):
     pila = []
