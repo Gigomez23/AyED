@@ -1,7 +1,7 @@
-from playlist import Playlist
+from evaluacion.models.playlist import Playlist
 
 
-def main():
+def menu3():
     playlist = Playlist()
 
     while True:
@@ -54,4 +54,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    menu3()
