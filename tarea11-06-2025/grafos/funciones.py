@@ -20,7 +20,7 @@ def imprimir_menu():
     print("----- Menú Principal -----")
     print("1. Agregar arista")
     print("2. Imprimir grafo")
-    print("3. Encontrar Vecinos de un arista")
+    print("3. Encontrar Vecinos de una vértice")
     print("4. Verificar conexiones entre dos aristas")
     print("5. Orden de recorrido BFS")
     print("6. Orden de recorrido DFS")
